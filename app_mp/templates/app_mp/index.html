@@ -1,9 +1,16 @@
-<h1>Playlist</h1>
+{% extends 'app_mp/base.html' %}
+
+{% block content %}
+<br><br>
+<h1 style = 'text-decoration: underline;'>Playlist</h1>
+
 
 {% for item in songs %}
+
   Song     : {{ item.song_name }} <br>
   Artist   : {{ item.music_dir }} <br>
-  Starring : {{ item.star_ring }}
-<hr>
+  Starring : {{ item.star_ring }} <hr>
+
 {% endfor %}
 
+{% endblock %}

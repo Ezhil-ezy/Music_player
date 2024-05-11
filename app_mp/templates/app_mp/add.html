@@ -1,0 +1,23 @@
+{% extends 'app_mp/base.html' %}
+
+{% block content %}
+<br><br>
+<form method = 'POST' action = '{%url "add" %}'>
+
+  {% csrf_token %}
+  <div class="mb-3">
+
+    <input type="text" class="form-control" name = 'song_name' placeholder = "Enter song name" >
+  </div>
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" name = 'music_dir' placeholder = "Enter artist name" >
+  </div>
+  <!--<div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>-->
+  <button type="submit" style = 'float: right' class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
